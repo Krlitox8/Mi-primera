@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  font-family: "Noto Sans", sans-serif;
+  padding: 20px;
+}
+
+section {
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden; /*evitar que se salga de la pantalla visible*/
+}
+
+
+
+p {
+  word-wrap: break-word; /* Para romper palabras largas*/
+}
+
+h1, h2, p {
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+  line-height: 1.5;  /* Aumenta el espacio entre líneas para legibilidad */
+}
+
+@media (max-width: 768px) {
+  section {
+    max-width: 100%; /* Ajusta el ancho a pantallas más pequeñas */
+  }
+  
+  p {
+    font-size: 1rem; /* Disminuye el tamaño del texto en pantallas pequeñas */
+  }
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Desactiva el scroll horizontal no deseado */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100% /* El cuerpo ocupará todo el ancho de la pantalla */
+  overflow-x: hidden; /* Deshabilita el desplazamiento horizontal */
+}
