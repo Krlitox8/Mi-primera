@@ -26,6 +26,10 @@ body{
   top: 0;
 }
 
+.menu button{
+  display: none;
+}
+
 .menu h1{
   margin-bottom: 30px;
 }
@@ -78,6 +82,7 @@ p{
   }
 
   .menu button{
+    display: block;
     font-size: 20px;
     font-weight: bold;
     position: absolute;
