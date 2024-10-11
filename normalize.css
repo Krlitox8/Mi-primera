@@ -10,7 +10,7 @@
 
 *{
   margin: 0;
-  boxi-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
