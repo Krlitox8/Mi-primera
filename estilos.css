@@ -1,45 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
+  margin: 0;
   font-family: "Noto Sans", sans-serif;
-  padding: 20px;
 }
 
-section {
-  max-width: 90%;
-  margin: 0 auto;
-  overflow: hidden; /*evitar que se salga de la pantalla visible*/
+.main{
+  display: flex;
 }
 
-
-
-p {
-  word-wrap: break-word; /* Para romper palabras largas*/
+.menu{
+  padding: 40px;
+  padding-top: 20px;
+  padding-right: 60px;
+  background: gray;
 }
 
-h1, h2, p {
-  font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
-  line-height: 1.5;  /* Aumenta el espacio entre líneas para legibilidad */
+.menu-content{
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
 }
 
-@media (max-width: 768px) {
-  section {
-    max-width: 100%; /* Ajusta el ancho a pantallas más pequeñas */
-  }
-  
-  p {
-    font-size: 1rem; /* Disminuye el tamaño del texto en pantallas pequeñas */
-  }
+.menu h1{
+  margin-bottom: 30px;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden; /* Desactiva el scroll horizontal no deseado */
-}
-
-body, html {
+.menu ul{
+  list-style: none;
   margin: 0;
   padding: 0;
-  width: 100% /* El cuerpo ocupará todo el ancho de la pantalla */
-  overflow-x: hidden; /* Deshabilita el desplazamiento horizontal */
+}
+
+.menu li{
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.menu a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.content{
+  padding: 40px;
+  text-align: justify;
+}
+
+.content h2{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .menu{
+    height: 100%;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    transition: 0.5s;
+  }
+
+  .menu-activo{
+    transform: translate(0%);
+  }
+
+  .menu button{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(230px);
+  }
+
+  .menu-content{
+    position: static;
+  }
+
+  .content{
+    padding: 20px 40px;
+  }
 }
